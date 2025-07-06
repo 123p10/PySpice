@@ -303,7 +303,7 @@ class Model(Statement):
 
         text = line.right_of('.model').strip()
         import re
-        mtch = re.match('\s*([^ \t]+)\s*([^ \t(]+)(.*)', text)
+        mtch = re.match(r'\s*([^ \t]+)\s*([^ \t(]+)(.*)', text)
         self._name = mtch[1]
         self._model_type = mtch[2]
         params = mtch[3]
